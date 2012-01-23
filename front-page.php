@@ -51,8 +51,8 @@ get_header(); ?>
                 <h1>Participants</h1>
                 <ul></ul>
             </section>
-            <section id="schedule">
-                <h1>Schedule</h1>
+            <section id="agenda">
+                <h1>Agenda</h1>
             </section>
 
 			</div><!-- #content -->

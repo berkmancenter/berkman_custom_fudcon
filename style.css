@@ -52,18 +52,16 @@ body, input, textarea {
     font-weight: normal;
 }
 #content {
-    margin: 0 7.6%;
+    margin: 0;
     width: auto;
 }
 #participants {
     list-style: none;
-    white-space: nowrap;
-    height: 150px;
     overflow: hidden;
 }
 #participants li {
     float: left;
-    width: 150px;
+    width: 50%;
     height: 150px;
     display: block;
     text-align: center;
@@ -78,7 +76,20 @@ body, input, textarea {
     font-size: 0.8em;
 }
 section > h1 {
-    font-size: 2.2em;
-    border-bottom: 1px dashed #AAA;
-    margin-left: -4%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: .6em;
+}
+section:nth-child(2) {
+    border: 1px dashed #aaa;
+    border-width: 0 1px;
+}
+section {
+    width: 31%;
+    float: left;
+    height: 500px;
+    padding: 5px 1.1%;
+}
+#main {
+    padding: 0;
 }
