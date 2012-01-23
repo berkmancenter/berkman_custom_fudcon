@@ -1,0 +1,84 @@
+/*
+Theme Name:     FUDCon
+Description:    Custom Twentyeleven child theme for Truthiness conference
+Author:         Justin Clark
+Template:       twentyeleven
+*/
+
+@import url("../twentyeleven/style.css");
+
+body, input, textarea {
+    font-family: 'Lato', sans-serif;
+}
+#site-title, #site-description {
+    margin-right: auto;
+}
+#site-title {
+    font-family: "Raleway";
+}
+#site-description {
+    margin-top: 8px;
+    font-family: "Josefin Slab";
+    font-size: 18px;
+    white-space: nowrap;
+    color: #444;
+    margin-bottom: 15px;
+}
+#branding {
+    text-align: center;
+    border-top-width: 0px;
+    border-bottom: 8px double #999;
+}
+#branding hgroup {
+    margin: 0 3%;
+}
+#truth {
+    font-family: "Raleway";
+    /*font-family: "IM Fell Double Pica SC";*/
+    font-size: 75px;
+    font-weight: normal;
+}
+#iness {
+    font-size: 75px;
+    color: #CCC;
+    font-weight: normal;
+}
+#in {
+    margin: 0 25px;
+}
+#digital-media {
+    font-family: "Raleway";
+    font-size: 75px;
+    font-weight: normal;
+}
+#content {
+    margin: 0 7.6%;
+    width: auto;
+}
+#participants {
+    list-style: none;
+    white-space: nowrap;
+    height: 150px;
+    overflow: hidden;
+}
+#participants li {
+    float: left;
+    width: 150px;
+    height: 150px;
+    display: block;
+    text-align: center;
+}
+#participants img {
+    width: 75px;
+    height: 75px;
+    padding: 3px;
+}
+.participant-name {
+    display: block;
+    font-size: 0.8em;
+}
+section > h1 {
+    font-size: 2.2em;
+    border-bottom: 1px dashed #AAA;
+    margin-left: -4%;
+}
