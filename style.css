@@ -162,6 +162,9 @@ section a.more-page {
 #updates {
     padding: 1% 5%;
 }
+#updates {
+    border-bottom: 1px dashed #aaa;
+}
 #updates article {
     padding: 0 !important;
 }
@@ -182,4 +185,7 @@ section a.more-page {
 }
 #front-content section .entry-content {
     width: 80%;
+}
+#updates .entry-content {
+    width: auto !important;
 }

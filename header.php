@@ -69,6 +69,7 @@
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/fudcon.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.cycle.all.js" type="text/javascript"></script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -43,6 +43,16 @@ get_header(); ?>
                     </header>
                     <!-- <a href="blog/" class="more-page">Full blog &raquo;</a> -->
                 </section>
+                <section id="twitter">
+                    <header>
+                        <h1><a href="twitter.com">Twitter</a></h1>
+                    </header>
+                    <ul id="tweets">
+                        <li class="tweet">This is a tweet about #truthiness.</li>
+                        <li class="tweet">This is another tweet about #truthiness.</li>
+                        <li class="tweet">This is yet another tweet about #truthiness.</li>
+                    </ul>
+                </section>
 			</div>
 		</div>
 

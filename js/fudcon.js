@@ -41,9 +41,17 @@ $(function() {
         dataType: 'html',
         success: function(data) {
             $('#content > *', data).insertAfter('#updates > header');
+            /*$('#updates').cycle({
+                slideExpr: 'article',
+                fx: 'scrollUp'
+            });*/
         },
         error: function(jqXHR) {
             alert('Error');
         }
+    });
+
+    $('#tweets').cycle({
+        fx: 'scrollUp'
     });
 });
