@@ -18,8 +18,29 @@ $(function() {
         url: 'agenda/',
         dataType: 'html',
         success: function(data) {
-            $('.entry-content', data).appendTo('#agenda');
-            console.log($('.entry-content', data));
+            $('.entry-content', data).insertAfter('#agenda > header');
+        },
+        error: function(jqXHR) {
+            alert('Error');
+        }
+    });
+
+    $.ajax({
+        url: 'about/',
+        dataType: 'html',
+        success: function(data) {
+            $('.entry-content', data).insertAfter('#about > header');
+        },
+        error: function(jqXHR) {
+            alert('Error');
+        }
+    });
+
+    $.ajax({
+        url: 'blog/',
+        dataType: 'html',
+        success: function(data) {
+            $('#content > *', data).insertAfter('#updates > header');
         },
         error: function(jqXHR) {
             alert('Error');

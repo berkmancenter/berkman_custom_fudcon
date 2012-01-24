@@ -7,8 +7,16 @@ Template:       twentyeleven
 
 @import url("../twentyeleven/style.css");
 
+body {
+    background: url(black_denim.png);
+    background-position: initial initial;
+    background-repeat: initial initial;
+}
 body, input, textarea {
     font-family: 'Lato', sans-serif;
+}
+#page {
+    border-radius: 9px 9px 0 0;
 }
 #site-title, #site-description {
     margin-right: auto;
@@ -22,12 +30,11 @@ body, input, textarea {
     font-size: 18px;
     white-space: nowrap;
     color: #444;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 #branding {
     text-align: center;
-    border-top-width: 0px;
-    border-bottom: 8px double #999;
+    border: 0;
 }
 #branding hgroup {
     margin: 0 3%;
@@ -51,13 +58,16 @@ body, input, textarea {
     font-size: 75px;
     font-weight: normal;
 }
-#content {
-    margin: 0;
+#columns {
+    /*margin: 0 -7.6%;*/
     width: auto;
 }
 #participants {
     list-style: none;
     overflow: hidden;
+}
+#participants ul {
+    margin: 0;
 }
 #participants li {
     float: left;
@@ -75,21 +85,101 @@ body, input, textarea {
     display: block;
     font-size: 0.8em;
 }
-section > h1 {
+#columns {
+    border-bottom: 1px dashed #aaa;
+    width: 100%;
+}
+#front-content section {
+    position: relative;
+}
+section a.more-page {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: .75em;
+    color: #555;
+}
+#front-content section > header h1 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: .6em;
 }
-section:nth-child(2) {
+#front-content section > header a {
+    color: #222;
+}
+#updates > header h1 {
+    font-size: 2em !important;
+    margin-bottom: 0 !important;
+}
+#participants {
+    background-color: #F8F8F8;
     border: 1px dashed #aaa;
     border-width: 0 1px;
 }
-section {
+#columns section.column {
     width: 31%;
     float: left;
-    height: 500px;
     padding: 5px 1.1%;
+    height: 670px;
 }
 #main {
     padding: 0;
+}
+.entry-content {
+    padding-top: .6em;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+} 
+#agenda ul {
+    margin: 0;
+}
+#access {
+    background: -webkit-linear-gradient(#666, #444);
+}
+#access a {
+    line-height: 2.7em;
+}
+#access ul {
+    font-size: 16px;
+}
+#access div {
+    margin: 0 0 0 17.6%;
+}
+#updates .entry-meta {
+    position: static;
+}
+#updates .entry-header, #updates .entry-meta, #updates .entry-content {
+    width: auto;
+}
+#updates {
+    padding: 1% 5%;
+}
+#updates article {
+    padding: 0 !important;
+}
+#updates h1.entry-title {
+    font-size: 1.5em !important;
+    padding-top: 5px;
+}
+#agenda .entry-content > div {
+    margin-bottom: 15px;
+}
+#agenda li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.event-title {
+    font-style: italic;
+    display: block;
+}
+#front-content section .entry-content {
+    width: 80%;
 }
