@@ -17,6 +17,7 @@ body, input, textarea {
 }
 #page {
     border-radius: 9px 9px 0 0;
+    max-width: 999px;
 }
 #site-title, #site-description {
     margin-right: auto;
@@ -107,20 +108,31 @@ section a.more-page {
 #front-content section > header a {
     color: #222;
 }
-#updates > header h1 {
-    font-size: 2em !important;
-    margin-bottom: 0 !important;
+.one {
+    width: 33.33%;
+    background-color: #f3f3f3;
 }
-#participants {
-    background-color: #F8F8F8;
-    border: 1px dashed #aaa;
-    border-width: 0 1px;
+.two {
+    width: 66.66%;
 }
-#columns section.column {
-    width: 31%;
+.two header h1 {
+    font-size: 1.8em !important;
+}
+.three {
+    width: 100%;
+}
+.column {
     float: left;
-    padding: 5px 1.1%;
-    height: 670px;
+    padding: 5px 11px;
+    border: 1px dashed #aaa;
+    height: 300px;
+    border-width: 0 0 1px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#front-content .column:nth-child(even) {
+    border-width: 0 1px 1px 1px;
 }
 #main {
     padding: 0;
@@ -160,9 +172,6 @@ section a.more-page {
     width: auto;
 }
 #updates {
-    padding: 1% 5%;
-}
-#updates {
     border-bottom: 1px dashed #aaa;
 }
 #updates article {
@@ -188,4 +197,17 @@ section a.more-page {
 }
 #updates .entry-content {
     width: auto !important;
+}
+#event-location {
+    float: left;
+}
+#event-date {
+    float: right;
+}
+#event-location, #event-date {
+    font-family: "Lato";
+    margin-top: -20px;
+}
+#front-content {
+    width: 100%;
 }

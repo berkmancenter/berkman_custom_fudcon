@@ -1,5 +1,5 @@
 $(function() {
-    $.ajax({
+    /*$.ajax({
         url: 'participants/',
         dataType: 'html',
         success: function(data) {
@@ -44,7 +44,7 @@ $(function() {
             /*$('#updates').cycle({
                 slideExpr: 'article',
                 fx: 'scrollUp'
-            });*/
+            });
         },
         error: function(jqXHR) {
             alert('Error');
@@ -53,5 +53,5 @@ $(function() {
 
     $('#tweets').cycle({
         fx: 'scrollUp'
-    });
+    });*/
 });

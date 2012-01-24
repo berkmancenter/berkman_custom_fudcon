@@ -48,8 +48,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC|Amatic+SC|Raleway:100|Waiting+for+the+Sunrise|Reenie+Beanie|Nothing+You+Could+Do|Crimson+Text|Sorts+Mill+Goudy|Josefin+Slab|Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Lato:400,700|Istok+Web:400,700|Gudea:400,700|Quattrocento+Sans|Terminal+Dosis:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:100|Josefin+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -76,8 +76,14 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span id="truth">Truth</span><span id="iness">iness</span> <span id="in">in</span> <span id="digital-media">Digital Media</span></a></span></h1>
+                <h1 id="site-title">
+                    <span>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                        <span id="truth">Truth</span><span id="iness">iness</span> <span id="in">in</span> <span id="digital-media">Digital Media</span></a>
+                    </span>
+                </h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+                <div id="event-location">Harvard University</div><div id="event-date">March 6-7, 2012</div>
 			</hgroup>
 
 			<?php
