@@ -24,6 +24,7 @@ body, input, textarea {
 }
 #site-title {
     font-family: "Raleway";
+    padding-top: 1.5em;
 }
 #site-description {
     margin-top: 8px;
@@ -31,14 +32,14 @@ body, input, textarea {
     font-size: 18px;
     white-space: nowrap;
     color: #444;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 #branding {
     text-align: center;
     border: 0;
 }
 #branding hgroup {
-    margin: 0 3%;
+    padding-top: 3.5%;
 }
 #truth {
     font-family: "Raleway";
@@ -103,7 +104,7 @@ section a.more-page {
 #front-content section > header h1 {
     text-align: center;
     font-size: 1.6em;
-    margin-bottom: .6em;
+    margin-bottom: 0;
 }
 #front-content section > header a {
     color: #222;
@@ -124,15 +125,17 @@ section a.more-page {
 .column {
     float: left;
     padding: 5px 11px;
-    border: 1px dashed #aaa;
-    height: 300px;
-    border-width: 0 0 1px 0;
+    border: 0px dashed #aaa;
+    border-width: 0 1px 0 0;
+    padding-bottom: 1000px;
+    margin-bottom: -990px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+    overflow: hidden;
 }
-#front-content .column:nth-child(even) {
-    border-width: 0 1px 1px 1px;
+.column:last-child {
+    border-width: 0;
 }
 #main {
     padding: 0;
@@ -206,8 +209,17 @@ section a.more-page {
 }
 #event-location, #event-date {
     font-family: "Lato";
-    margin-top: -20px;
+    color: #c6c6c6;
+    font-size: 1.4em;
 }
 #front-content {
     width: 100%;
+}
+div.row {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px dashed #aaa;
+}
+div.row:last-child {
+    border-width: 0;
 }
