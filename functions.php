@@ -26,7 +26,7 @@ function featured_shortcode($atts) {
                 $html .= '<div class="row">';
             }
             $html .= '<section class="' . $numbers[$columns - 1] . ' column">' .
-                         '<header><h1>' . get_the_title() . '</h1></header>' .
+                         '<header><h1><a href="' . get_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h1></header>' .
                             do_shortcode(get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ) ) .
                      '</section>';
             $current_columns += $columns;
@@ -63,5 +63,41 @@ function recent_shortcode($atts) {
     }
     return $html;
 }
+function twitter_shortcode( $atts ) {
+		return "<script src='http://widgets.twimg.com/j/2/widget.js'></script> 
+              <script type='text/javascript' language='javascript'> 
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'berkmancenter',
+  interval: 6000,
+  title: 'Berkman Center',
+  subject: 'berkmancenter',
+  width: 188,
+  height: 200,
+  theme: {
+    shell: {
+      background: '#5FA1D0',
+      color: '#ffffff',
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>";
+}
+add_shortcode( 'twitter', 'twitter_shortcode' );
 add_shortcode( 'featured', 'featured_shortcode' );
 add_shortcode( 'recent_posts', 'recent_shortcode' );

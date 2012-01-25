@@ -14,11 +14,7 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="front-content" role="main">
-                <?php echo featured_shortcode(); ?>
-			</div>
-		</div>
+<?php echo featured_shortcode(); ?>
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

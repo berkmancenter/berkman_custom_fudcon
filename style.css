@@ -7,6 +7,7 @@ Template:       twentyeleven
 
 @import url("../twentyeleven/style.css");
 
+/*---- Whole page template ----*/
 body {
     background: url(black_denim.png);
     background-position: initial initial;
@@ -18,6 +19,20 @@ body, input, textarea {
 #page {
     border-radius: 9px 9px 0 0;
     max-width: 999px;
+}
+/*---- [End] Whole page template ----*/
+
+/*---- Heading ----*/
+#event-location {
+    float: left;
+}
+#event-date {
+    float: right;
+}
+#event-location, #event-date {
+    font-family: "Lato";
+    color: #c6c6c6;
+    font-size: 1.4em;
 }
 #site-title, #site-description {
     margin-right: auto;
@@ -44,7 +59,6 @@ body, input, textarea {
 }
 #truth {
     font-family: "Raleway";
-    /*font-family: "IM Fell Double Pica SC";*/
     font-size: 75px;
     font-weight: normal;
 }
@@ -61,67 +75,40 @@ body, input, textarea {
     font-size: 75px;
     font-weight: normal;
 }
-#columns {
-    /*margin: 0 -7.6%;*/
-    width: auto;
-}
-#participants {
-    list-style: none;
-    overflow: hidden;
-}
-#participants ul {
-    margin: 0;
-}
-#participants li {
-    float: left;
-    width: 50%;
-    height: 150px;
-    display: block;
-    text-align: center;
-}
-#participants img {
-    width: 75px;
-    height: 75px;
-    padding: 3px;
-}
-.participant-name {
-    display: block;
-    font-size: 0.8em;
-}
-#columns {
-    border-bottom: 1px dashed #aaa;
+/*---- [End] Heading ----*/
+
+/*#front-content {
     width: 100%;
 }
-#front-content section {
-    position: relative;
-}
-section a.more-page {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: .75em;
-    color: #555;
-}
-#front-content section > header h1 {
-    text-align: center;
-    font-size: 1.6em;
+*/
+/*---- Nav menu ----*/
+#access {
+    background: -webkit-linear-gradient(#666, #444);
     margin-bottom: 0;
 }
-#front-content section > header a {
-    color: #222;
+#access a {
+    line-height: 2.7em;
 }
-.one {
-    width: 33.33%;
-    background-color: #f3f3f3;
+#access ul {
+    font-size: 16px;
 }
-.two {
-    width: 66.66%;
+#access div {
+    margin: 0 0 0 17.6%;
 }
-.two header h1 {
-    font-size: 1.8em !important;
+.home #main {
+    padding-top: 0; /* Pull columns up to menu */
 }
-.three {
+
+/*---- [End] Nav menu ----*/
+
+/*---- Columns and Rows ----*/
+div.row {
     width: 100%;
+    overflow: hidden;
+    border-bottom: 1px dashed #aaa;
+}
+div.row:last-child {
+    border-width: 0;
 }
 .column {
     float: left;
@@ -134,17 +121,71 @@ section a.more-page {
     -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+}
+.column > header h1 {
+    text-align: center;
+    font-size: 1.6em;
+    margin: 0.1em 0 0.3em 0;
+}
+.column > header a {
+    color: #222;
 }
 .column:last-child {
     border-width: 0;
 }
-#main {
-    padding: 0;
+.one {
+    width: 33.33%;
+    background-color: #f3f3f3;
 }
-.entry-content {
+.two {
+    width: 66.66%;
+}
+.two > header h1 {
+    font-size: 1.8em !important;
+}
+.three {
+    width: 100%;
+}
+.three > header h1 {
+    font-size: 2em !important;
+}
+/*---- [End] Columns and Rows ----*/
+
+/*---- Fix blog section on front page ----*/
+.singular.home .entry-header .entry-meta {
+    position: static;
+}
+.singular.page.home .hentry {
+    padding-top: 0;
+}
+.singular.home .entry-header, .singular.home .entry-content, .singular.home footer.entry-meta, .singular.home #comments-title {
+    width: 90%;
+}
+.singular.home .entry-meta .edit-link a {
+    position: static;
+}
+.singular.home .entry-title {
+    line-height: 14px;
+}
+.home .entry-content, .home .entry-summary {
     padding-top: .6em;
 }
-.clearfix:after {
+.home .entry-content p {
+    margin-bottom: .6em;
+}
+.home .post .entry-title {
+    font-size: 22px;
+}
+/*---- [End] Fix blog section on front page ----*/
+
+/*---- Twitter on front page ----*/
+.twtr-doc {
+    margin: 0 auto;
+}
+
+/*---- Clearfix ----*/
+/*.clearfix:after {
     content: ".";
     display: block;
     height: 0;
@@ -153,84 +194,5 @@ section a.more-page {
 }
 .clearfix {
     display: inline-block;
-} 
-#agenda ul {
-    margin: 0;
-}
-#access {
-    background: -webkit-linear-gradient(#666, #444);
-}
-#access a {
-    line-height: 2.7em;
-}
-#access ul {
-    font-size: 16px;
-}
-#access div {
-    margin: 0 0 0 17.6%;
-}
-#updates .entry-meta {
-    position: static;
-}
-#updates .entry-header, #updates .entry-meta, #updates .entry-content {
-    width: auto;
-}
-#updates {
-    border-bottom: 1px dashed #aaa;
-}
-#updates article {
-    padding: 0 !important;
-}
-#updates h1.entry-title {
-    font-size: 1.5em !important;
-    padding-top: 5px;
-}
-#agenda .entry-content > div {
-    margin-bottom: 15px;
-}
-#agenda li {
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-.event-title {
-    font-style: italic;
-    display: block;
-}
-#front-content section .entry-content {
-    width: 80%;
-}
-#updates .entry-content {
-    width: auto !important;
-}
-#event-location {
-    float: left;
-}
-#event-date {
-    float: right;
-}
-#event-location, #event-date {
-    font-family: "Lato";
-    color: #c6c6c6;
-    font-size: 1.4em;
-}
-#front-content {
-    width: 100%;
-}
-div.row {
-    width: 100%;
-    overflow: hidden;
-    border-bottom: 1px dashed #aaa;
-}
-div.row:last-child {
-    border-width: 0;
-}
-.singular .entry-header .entry-meta {
-    position: static;
-}
-.singular.page .hentry {
-    padding-top: 0;
-}
-    
-.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
-    width: 90%;
-}
+} */
+/*---- [End] Clearfix ----*/
