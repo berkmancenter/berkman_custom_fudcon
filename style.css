@@ -77,10 +77,6 @@ body, input, textarea {
 }
 /*---- [End] Heading ----*/
 
-/*#front-content {
-    width: 100%;
-}
-*/
 /*---- Nav menu ----*/
 #access {
     background: -webkit-linear-gradient(#666, #444);
@@ -102,14 +98,6 @@ body, input, textarea {
 /*---- [End] Nav menu ----*/
 
 /*---- Columns and Rows ----*/
-div.row {
-    width: 100%;
-    overflow: hidden;
-    border-bottom: 1px dashed #aaa;
-}
-div.row:last-child {
-    border-width: 0;
-}
 .column {
     float: left;
     padding: 5px 11px;
@@ -128,15 +116,23 @@ div.row:last-child {
     font-size: 1.6em;
     margin: 0.1em 0 0.3em 0;
 }
+.row:nth-child(even) .column:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+.row:nth-child(odd) .column:nth-child(even) {
+    background-color: #f3f3f3;
+}
 .column > header a {
     color: #222;
 }
 .column:last-child {
     border-width: 0;
 }
+.column:first-child {
+    border-width: 0 1px 0 0;
+}
 .one {
     width: 33.33%;
-    background-color: #f3f3f3;
 }
 .two {
     width: 66.66%;
@@ -149,6 +145,14 @@ div.row:last-child {
 }
 .three > header h1 {
     font-size: 2em !important;
+}
+div.row {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px dashed #aaa;
+}
+div.row:last-child {
+    border-width: 0;
 }
 /*---- [End] Columns and Rows ----*/
 
@@ -183,16 +187,3 @@ div.row:last-child {
 .twtr-doc {
     margin: 0 auto;
 }
-
-/*---- Clearfix ----*/
-/*.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-.clearfix {
-    display: inline-block;
-} */
-/*---- [End] Clearfix ----*/

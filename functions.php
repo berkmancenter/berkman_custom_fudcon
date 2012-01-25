@@ -25,6 +25,10 @@ function featured_shortcode($atts) {
             if ($current_columns == 0) {
                 $html .= '<div class="row">';
             }
+            elseif ($current_columns > 0 && $current_columns + $columns > 3) {
+                $html .= '</div>';
+                $html .= '<div class="row">';
+            }
             $html .= '<section class="' . $numbers[$columns - 1] . ' column">' .
                          '<header><h1><a href="' . get_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h1></header>' .
                             do_shortcode(get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ) ) .

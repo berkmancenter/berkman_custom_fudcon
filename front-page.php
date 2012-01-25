@@ -16,5 +16,4 @@ get_header(); ?>
 
 <?php echo featured_shortcode(); ?>
 
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
