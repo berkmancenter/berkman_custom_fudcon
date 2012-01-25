@@ -54,4 +54,8 @@ $(function() {
     $('#tweets').cycle({
         fx: 'scrollUp'
     });*/
+    /*$('article').parent().cycle({
+        slideExpr: 'article',
+        fx: 'slideUp'
+    });*/
 });

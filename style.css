@@ -25,6 +25,7 @@ body, input, textarea {
 #site-title {
     font-family: "Raleway";
     padding-top: 1.5em;
+    white-space: nowrap;
 }
 #site-description {
     margin-top: 8px;
@@ -222,4 +223,14 @@ div.row {
 }
 div.row:last-child {
     border-width: 0;
+}
+.singular .entry-header .entry-meta {
+    position: static;
+}
+.singular.page .hentry {
+    padding-top: 0;
+}
+    
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+    width: 90%;
 }
