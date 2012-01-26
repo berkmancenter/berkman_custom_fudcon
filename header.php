@@ -53,6 +53,13 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<!--[if lt IE 8]>
+<style>
+.column {
+    *behavior: url(<?php echo get_stylesheet_directory_uri(); ?>/boxsizing.htc);
+}
+</style>
+<![endif]-->
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
