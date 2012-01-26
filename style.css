@@ -36,6 +36,7 @@ body, input, textarea {
 }
 #site-title, #site-description {
     margin-right: auto;
+    font-weight: 100;
 }
 #site-title {
     font-family: "Raleway";
