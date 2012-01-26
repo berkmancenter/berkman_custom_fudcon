@@ -50,15 +50,11 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:100|Josefin+Slab' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/IE7.css" />
+<![endif]-->
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-<!--[if lt IE 8]>
-<style>
-.column {
-    *behavior: url(<?php echo get_stylesheet_directory_uri(); ?>/boxsizing.htc);
-}
-</style>
 <![endif]-->
 <?php
 	/* We add some JavaScript to pages with the comment form
