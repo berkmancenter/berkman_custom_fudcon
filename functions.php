@@ -82,7 +82,7 @@ new TWTR.Widget({
   theme: {
     shell: {
       background: '#5FA1D0',
-      color: '#ffffff',
+      color: '#ffffff'
     },
     tweets: {
       background: '#ffffff',
