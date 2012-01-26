@@ -36,7 +36,6 @@ body, input, textarea {
 }
 #site-title, #site-description {
     margin-right: auto;
-    font-weight: 100;
 }
 #site-title {
     font-family: "Raleway";
@@ -50,6 +49,7 @@ body, input, textarea {
     white-space: nowrap;
     color: #444;
     margin-bottom: 40px;
+    font-weight: 100;
 }
 #branding {
     text-align: center;
@@ -57,6 +57,9 @@ body, input, textarea {
 }
 #branding hgroup {
     padding-top: 3.5%;
+}
+#truth, #iness, #in, #digital-media {
+    font-weight: 100;
 }
 #truth {
     font-family: "Raleway";
