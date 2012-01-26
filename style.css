@@ -58,26 +58,24 @@ body, input, textarea {
 #branding hgroup {
     padding-top: 3.5%;
 }
-#truth, #iness, #in, #digital-media {
-    font-weight: 100;
-}
 #truth {
     font-family: "Raleway";
     font-size: 75px;
-    font-weight: normal;
+    font-weight: 100;
 }
 #iness {
     font-size: 75px;
     color: #CCC;
-    font-weight: normal;
+    font-weight: 100;
 }
 #in {
     margin: 0 25px;
+    font-weight: 100;
 }
 #digital-media {
     font-family: "Raleway";
     font-size: 75px;
-    font-weight: normal;
+    font-weight: 100;
 }
 /*---- [End] Heading ----*/
 
