@@ -57,7 +57,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <!--[if (gte IE 6)&(lte IE 8)]>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/selectivizr-min.js"></script>
+  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/selectivizr-min.js"></script>
 <![endif]-->
 <?php
 	/* We add some JavaScript to pages with the comment form
