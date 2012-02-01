@@ -42,7 +42,7 @@ function featured_shortcode($atts) {
     }
     wp_reset_postdata();
 
-	return $html;
+    return $html;
 }
 function recent_shortcode($atts) {
     $html = '';
@@ -68,7 +68,7 @@ function recent_shortcode($atts) {
     return $html;
 }
 function twitter_shortcode( $atts ) {
-		return "<script src='http://widgets.twimg.com/j/2/widget.js'></script> 
+        return "<script src='http://widgets.twimg.com/j/2/widget.js'></script> 
               <script type='text/javascript' language='javascript'> 
 new TWTR.Widget({
   version: 2,
@@ -102,6 +102,17 @@ new TWTR.Widget({
 }).render().start();
 </script>";
 }
+function fudcon_iframe_shortcode( $atts ){
+    extract( shortcode_atts( array(
+        'width' => '835',
+        'height' => '920',
+        'src' => ''
+        ), $atts ) 
+    );
+    $output = '<iframe src=" ' . esc_attr($src) . '" allowfullscreen="" width="'. esc_attr($width) . '" frameborder="0" height="' . esc_attr($height) . '" ></iframe>';
+    return $output;
+}
 add_shortcode( 'twitter', 'twitter_shortcode' );
 add_shortcode( 'featured', 'featured_shortcode' );
 add_shortcode( 'recent_posts', 'recent_shortcode' );
+add_shortcode( 'iframe', 'fudcon_iframe_shortcode' );
