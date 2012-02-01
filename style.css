@@ -42,6 +42,9 @@ body, input, textarea {
     padding-top: 1.5em;
     white-space: nowrap;
 }
+#site-title a:hover {
+    color: #111;
+}
 #site-description {
     margin-top: 8px;
     font-family: "Josefin Slab";
@@ -189,3 +192,28 @@ div.row:last-child {
 .twtr-doc {
     margin: 0 auto;
 }
+/*---- [End] Twitter on front page ----*/
+
+/*---- Fix weird twentyeleven css ----*/
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+    width: auto;
+}
+.singular .entry-header .entry-meta {
+    position: static;
+}
+.singular .entry-meta .edit-link a {
+    position: static;
+}
+.singular.page .hentry {
+    padding: 0;
+}
+.singular .hentry {
+    padding: 0;
+}
+#nav-single .nav-previous, #nav-single .nav-next {
+    float: inherit;
+}
+#content nav {
+    padding: 0;
+}
+/*---- [End] Fix weird twentyeleven css ----*/
