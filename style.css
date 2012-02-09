@@ -80,6 +80,13 @@ body, input, textarea {
     font-size: 75px;
     font-weight: 100;
 }
+#topbar img {
+    vertical-align: middle;
+    width: auto;
+}
+#topbar li {
+    list-style: none;
+}
 /*---- [End] Heading ----*/
 
 /*---- Nav menu ----*/
@@ -217,3 +224,28 @@ div.row:last-child {
     padding: 0;
 }
 /*---- [End] Fix weird twentyeleven css ----*/
+
+/*---- Author info block ----*/
+.author-info {
+    background: #fbfbfb;
+    padding: 5px 10px;
+    margin: 5px; 20px;
+}
+.author-info-title {
+    font-size: 0.6em;
+}
+.author-name {
+    font-size: 1em;
+    font-weight: bold;
+}
+.author-bio {
+    font-style: italic;
+    font-size: 0.8em;
+}
+.author-pic {
+    float: left;
+    padding: 4px;
+    border: 1px solid #ccc;
+    max-height: 80px;
+    margin: 5px;
+}

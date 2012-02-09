@@ -60,13 +60,14 @@ function recent_shortcode($atts) {
         while ( $my_query->have_posts() ) { 
             $my_query->the_post();
             global $post;
-            get_template_part( 'content', get_post_format() ); 
+            get_template_part( 'content', 'post-front' ); 
         }
         $html = ob_get_contents();
         ob_end_clean();
     }
     return $html;
 }
+    
 function twitter_shortcode( $atts ) {
         return "<script src='http://widgets.twimg.com/j/2/widget.js'></script> 
               <script type='text/javascript' language='javascript'> 
@@ -112,6 +113,11 @@ function fudcon_iframe_shortcode( $atts ){
     $output = '<iframe src=" ' . esc_attr($src) . '" allowfullscreen="" width="'. esc_attr($width) . '" frameborder="0" height="' . esc_attr($height) . '" ></iframe>';
     return $output;
 }
+register_sidebar(array(
+    'name' => 'Top Bar',
+    'id' => 'top-sidebar',
+    'description' => 'The bar above the nav and below the header'
+));
 add_shortcode( 'twitter', 'twitter_shortcode' );
 add_shortcode( 'featured', 'featured_shortcode' );
 add_shortcode( 'recent_posts', 'recent_shortcode' );

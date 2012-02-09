@@ -113,6 +113,10 @@
 			</a>
 			<?php endif; // end check for removed header image ?>
 
+            <div id="topbar">
+                <?php dynamic_sidebar('Top Bar'); ?> 
+            </div>
+
 
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
