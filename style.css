@@ -199,7 +199,7 @@ div.row:last-of-type {
     font-size: 22px;
 }
 .home article {
-    border-bottom: 1px dotted #ddd !important;
+    border-bottom: 1px solid #ccc !important;
 }
 /*---- [End] Fix blog section on front page ----*/
 
