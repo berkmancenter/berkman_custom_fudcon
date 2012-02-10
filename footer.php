@@ -23,7 +23,6 @@
 			?>
 
 			<div id="site-generator">
-                Some kind of footer
 				<?php //do_action( 'twentyeleven_credits' ); ?>
 				<!-- <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a> -->
 			</div>
