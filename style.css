@@ -20,6 +20,9 @@ body, input, textarea {
     border-radius: 9px 9px 0 0;
     max-width: 999px;
 }
+#berkman-footer-links {
+    display: none;
+}
 /*---- [End] Whole page template ----*/
 
 /*---- Heading ----*/
