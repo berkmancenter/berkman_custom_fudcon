@@ -48,8 +48,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Raleway:100|Josefin+Slab' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Raleway:100|Josefin+Slab|Lato:400,700' rel='stylesheet' type='text/css'>
 <!--[if lt IE 8]>
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/IE7.css" />
 <![endif]-->
@@ -73,7 +72,7 @@
 	 */
 	wp_head();
 ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/fudcon.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.cycle.all.js" type="text/javascript"></script>
 </head>
