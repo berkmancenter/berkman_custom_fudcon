@@ -26,10 +26,10 @@ body, input, textarea {
 #event-location {
     float: left;
 }
-#event-date {
+#event-access {
     float: right;
 }
-#event-location, #event-date {
+#event-location, #event-access {
     font-family: "Lato";
     color: #c6c6c6;
     font-size: 1.4em;
@@ -46,12 +46,11 @@ body, input, textarea {
     color: #111;
 }
 #site-description {
-    margin-top: 8px;
+    margin: 10px 0 5px;
     font-family: "Josefin Slab";
     font-size: 18px;
     white-space: nowrap;
     color: #444;
-    margin-bottom: 40px;
     font-weight: 100;
 }
 #branding {
@@ -154,6 +153,9 @@ body, input, textarea {
 }
 .three {
     width: 100%;
+    border-right-width: 0 !important;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 .three > header h1 {
     font-size: 2em !important;
@@ -163,7 +165,7 @@ div.row {
     overflow: hidden;
     border-bottom: 1px dashed #aaa;
 }
-div.row:last-child {
+div.row:last-of-type {
     border-width: 0;
 }
 /*---- [End] Columns and Rows ----*/
@@ -176,7 +178,8 @@ div.row:last-child {
     padding-top: 0;
 }
 .singular.home .entry-header, .singular.home .entry-content, .singular.home footer.entry-meta, .singular.home #comments-title {
-    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
 }
 .singular.home .entry-meta .edit-link a {
     position: static;
@@ -192,6 +195,9 @@ div.row:last-child {
 }
 .home .post .entry-title {
     font-size: 22px;
+}
+.home article {
+    border-bottom: 1px dotted #ddd !important;
 }
 /*---- [End] Fix blog section on front page ----*/
 

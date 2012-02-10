@@ -82,7 +82,6 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>
-                <div id="event-location">Harvard University</div><div id="event-date">March 6-7, 2012</div>
                 <h1 id="site-title">
                     <span>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
