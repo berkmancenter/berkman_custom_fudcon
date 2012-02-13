@@ -29,10 +29,11 @@ function featured_shortcode($atts) {
                 $html .= '</div>';
                 $html .= '<div class="row">';
             }
-            $html .= '<section class="' . $numbers[$columns - 1] . ' column">' .
-                         '<header><h1><a href="' . get_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h1></header>' .
-                            do_shortcode(get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ) ) .
-                     '</section>';
+            $html .= '<section class="' . $numbers[$columns - 1] . ' column">';
+            if (!get_post_meta(get_the_ID(), 'hide_title', true)) {
+                         $html .= '<header><h1><a href="' . get_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></h1></header>';
+            }
+            $html .= do_shortcode(get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ) ) . '</section>';
             $current_columns += $columns;
             if ($current_columns > 2) {
                 $html .= '</div>';
