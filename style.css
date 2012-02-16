@@ -16,11 +16,14 @@ body {
 body, input, textarea {
     font-family: 'Lato', sans-serif;
 }
+.one-column #page {
+    max-width: 999px;
+}
 #page {
     border-radius: 9px 9px 0 0;
     max-width: 999px;
 }
-#content {
+.one-column #content {
     width: auto;
     margin: 2% 6%;
 }
