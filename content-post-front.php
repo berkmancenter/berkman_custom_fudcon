@@ -22,9 +22,9 @@ $more = 0;
 			<?php endif; ?>
 
 			<?php if ( 'post' == get_post_type() ) : ?>
-			<!-- <div class="entry-meta">
-				<?php //twentyeleven_posted_on(); ?>
-			</div> --> <!-- .entry-meta -->
+			<div class="entry-meta">
+				<?php twentyeleven_posted_on(); ?>
+			</div> <!-- .entry-meta -->
 			<?php endif; ?>
             <?php if ( in_array('author_name', get_post_custom_keys($post->ID) ) ): ?>
                 <?php get_template_part( 'content', 'author-block' ); ?>
