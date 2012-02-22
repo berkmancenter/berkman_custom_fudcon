@@ -1,5 +1,14 @@
 <?php
 
+function twentyeleven_posted_on() {
+	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'twentyeleven' ),
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+}
+
 function featured_shortcode($atts) {
     $html = '';
     $numbers = array('one', 'two', 'three');
