@@ -268,3 +268,14 @@ div.row:last-of-type {
     height: 60px;
     margin: 5px;
 }
+/*---- [End] Author info block ----*/
+
+/*---- Participants Page ----*/
+.participants p:nth-child(odd) {
+    background-color: #eee;
+    border: 1px solid #aaa;
+}
+.participants p {
+    padding: 0 5px;
+}
+/*---- [End] Participants Page ----*/
