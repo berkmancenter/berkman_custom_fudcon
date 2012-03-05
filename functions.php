@@ -123,6 +123,13 @@ new TWTR.Widget({
 }).render().start();
 </script>";
 }
+function storify_shortcode( $atts ){
+    extract( shortcode_atts( array(
+        'user' => 'rebekahredux',
+        'story' => 'truthicon-tomorrow'
+    ) ));
+    return '<script src="//storify.com/' . esc_attr($user) . '/' . esc_attr($story) . '.js"></script><noscript>[<a href="//storify.com/' . esc_attr($user) . '/' . esc_attr($story) .'" target="_blank">View the story on Storify</a>]</noscript>';
+}
 function fudcon_iframe_shortcode( $atts ){
     extract( shortcode_atts( array(
         'width' => '835',
@@ -142,6 +149,7 @@ register_sidebar(array(
     'description' => 'The bar above the nav and below the header'
 ));
 add_shortcode( 'twitter', 'twitter_shortcode' );
+add_shortcode( 'storify', 'storify_shortcode' );
 add_shortcode( 'gilad_zoomit', 'gilad_zoomit_shortcode' );
 add_shortcode( 'featured', 'featured_shortcode' );
 add_shortcode( 'recent_posts', 'recent_shortcode' );
