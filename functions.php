@@ -128,7 +128,7 @@ function storify_shortcode( $atts ){
         'user' => 'rebekahredux',
         'story' => 'truthicon-tomorrow'
     ) ));
-    return '<script src="//storify.com/' . esc_attr($user) . '/' . esc_attr($story) . '.js"></script><noscript>[<a href="//storify.com/' . esc_attr($user) . '/' . esc_attr($story) .'" target="_blank">View the story on Storify</a>]</noscript>';
+    return '<script src="' . (is_ssl() ? 'https' : 'http') . '://storify.com/' . esc_attr($user) . '/' . esc_attr($story) . '.js"></script><noscript>[<a href="//storify.com/' . esc_attr($user) . '/' . esc_attr($story) .'" target="_blank">View the story on Storify</a>]</noscript>';
 }
 function fudcon_iframe_shortcode( $atts ){
     extract( shortcode_atts( array(
