@@ -82,9 +82,9 @@ function recent_shortcode($atts) {
 function twitter_shortcode( $atts ) {
     extract( shortcode_atts( array(
         'width' => '835',
-        'height' => '920',
-        'title' => 'Truthiness',
-        'subject' => 'truthicon',
+        'height' => '50',
+        'title' => 'Truthiness in Digital Media',
+        'subject' => '#truthicon',
         'search' => '#truthicon',
         'interval' => '6000'
         ), $atts ) 
@@ -133,12 +133,16 @@ function fudcon_iframe_shortcode( $atts ){
     $output = '<iframe src=" ' . esc_attr($src) . '" allowfullscreen="" width="'. esc_attr($width) . '" frameborder="0" height="' . esc_attr($height) . '" ></iframe>';
     return $output;
 }
+function gilad_zoomit_shortcode( $atts ) {
+    return '<script src="http://zoom.it/GQnt.js?width=auto&height=400px"></script>';
+}
 register_sidebar(array(
     'name' => 'Top Bar',
     'id' => 'top-sidebar',
     'description' => 'The bar above the nav and below the header'
 ));
 add_shortcode( 'twitter', 'twitter_shortcode' );
+add_shortcode( 'gilad_zoomit', 'gilad_zoomit_shortcode' );
 add_shortcode( 'featured', 'featured_shortcode' );
 add_shortcode( 'recent_posts', 'recent_shortcode' );
 add_shortcode( 'iframe', 'fudcon_iframe_shortcode' );
