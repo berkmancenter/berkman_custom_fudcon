@@ -126,8 +126,8 @@ body, input, textarea {
     padding: 5px 11px;
     border: 0px dashed #aaa;
     border-width: 0 1px 0 0;
-    padding-bottom: 1000px;
-    margin-bottom: -990px;
+    padding-bottom: 1400px;
+    margin-bottom: -1390px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -197,7 +197,7 @@ div.row:last-of-type {
     position: static;
 }
 .singular.home .entry-title {
-    line-height: 14px;
+    line-height: 22px;
 }
 .home .entry-content, .home .entry-summary {
     padding-top: .6em;
@@ -210,6 +210,10 @@ div.row:last-of-type {
 }
 .home article {
     border-bottom: 1px solid #ccc !important;
+}
+.read-more {
+    font-weight: bold;
+    text-align: center;
 }
 /*---- [End] Fix blog section on front page ----*/
 

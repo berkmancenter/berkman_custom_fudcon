@@ -55,14 +55,14 @@ function featured_shortcode($atts) {
     return $html;
 }
 function recent_shortcode($atts) {
+    extract( shortcode_atts( array( 'number' => '4' ), $atts ) );
     $html = '';
     $args = array(
-    'numberposts'     => 5,
-    'offset'          => 0,
     'orderby'         => 'post_date',
     'order'           => 'DESC',
     'post_type'       => 'post',
-    'post_status'     => 'publish' );
+    'post_status'     => 'publish',
+    'posts_per_page'  => $number );
     $my_query = new WP_Query($args);
 
     if ( $my_query->have_posts() ) { 
@@ -75,21 +75,31 @@ function recent_shortcode($atts) {
         $html = ob_get_contents();
         ob_end_clean();
     }
+    $html .= '<div class="read-more">Read more on the <a href="' . get_home_url(null, '/blog') .'">Blog &rarr;</a></div>';
     return $html;
 }
     
 function twitter_shortcode( $atts ) {
+    extract( shortcode_atts( array(
+        'width' => '835',
+        'height' => '920',
+        'title' => 'Truthiness',
+        'subject' => 'truthicon',
+        'search' => '#truthicon',
+        'interval' => '6000'
+        ), $atts ) 
+    );
         return "<script src='http://widgets.twimg.com/j/2/widget.js'></script> 
               <script type='text/javascript' language='javascript'> 
 new TWTR.Widget({
   version: 2,
   type: 'search',
-  search: 'berkmancenter',
-  interval: 6000,
-  title: 'Berkman Center',
-  subject: 'berkmancenter',
-  width: 188,
-  height: 200,
+  search: '" . esc_js($search) . "',
+  interval: " . esc_js($interval) . ",
+  title: '" . esc_js($title) . "',
+  subject: '" . esc_js($subject) . "',
+  width: " . esc_js($width) . ",
+  height: " . esc_js($height) . ",
   theme: {
     shell: {
       background: '#5FA1D0',
