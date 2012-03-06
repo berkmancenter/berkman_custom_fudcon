@@ -245,6 +245,10 @@ div.row:last-of-type {
 #content nav {
     padding: 0;
 }
+.singular div#author-info {
+    margin: 0;
+    padding: 20px;
+}
 /*---- [End] Fix weird twentyeleven css ----*/
 
 /*---- Author info block ----*/
