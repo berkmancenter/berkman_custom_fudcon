@@ -143,6 +143,29 @@ function fudcon_iframe_shortcode( $atts ){
 function gilad_zoomit_shortcode( $atts ) {
     return '<script src="http://zoom.it/GQnt.js?width=auto&height=400px"></script>';
 }
+function blog_index_shortcode( $atts ){
+    $query = new WP_Query(array(
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'nopaging' => TRUE
+    ));
+
+    $html = '<header class="entry-header"><h1 class="entry-title">Table of Contents</h1></header><table class="entry-content"><thead><tr><th>Title</th><th>Author</th></tr></thead><tbody>';
+    if ( $query->have_posts() ) { 
+        while ( $query->have_posts() ) { 
+            $query->the_post();
+            global $post;
+            $html .= '<tr><td><a href="' . get_permalink() . '">' . get_the_title() . '</a></td>';
+            $author = esc_attr(get_post_meta(get_the_ID(), 'author_name', true));
+            $author = empty($author) ? 'Berkman' : $author;
+            $html .= '<td>' . $author . '</td></tr>';
+        }
+    }
+    wp_reset_postdata();
+
+    $html .= '</tbody></table>';
+    return $html;
+}
 register_sidebar(array(
     'name' => 'Top Bar',
     'id' => 'top-sidebar',
@@ -154,3 +177,4 @@ add_shortcode( 'gilad_zoomit', 'gilad_zoomit_shortcode' );
 add_shortcode( 'featured', 'featured_shortcode' );
 add_shortcode( 'recent_posts', 'recent_shortcode' );
 add_shortcode( 'iframe', 'fudcon_iframe_shortcode' );
+add_shortcode( 'blog_index', 'blog_index_shortcode' );
