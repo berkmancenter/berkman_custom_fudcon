@@ -50,7 +50,8 @@ body, input, textarea {
 #site-title {
     font-family: "Raleway";
     padding-top: 1.5em;
-    white-space: nowrap;
+    line-height: 4em;
+    width: 103%;
 }
 #site-title a:hover {
     color: #111;
@@ -59,9 +60,9 @@ body, input, textarea {
     margin: 10px 0 5px;
     font-family: "Josefin Slab";
     font-size: 18px;
-    white-space: nowrap;
     color: #444;
     font-weight: 100;
+    width: 102%;
 }
 #branding {
     text-align: center;
